@@ -4,14 +4,14 @@ Copyright (c) 2023- All neurodb_dart_driver authors. All rights reserved.
 This source code is licensed under Apache 2.0 License.
 -->
 
-<h1 align="center"> Flutter Graph View </h1>
+<h1 align="center"> Neurodb Dart Driver </h1>
 <p align="center">
   <br> 中文 | <a href="https://github.com/dudu-ltd/neurodb_dart_driver/README-EN.md">English</a>
 </p>
 
 <p align="center">
   <a title="Powered by Flame" href="https://pub.flutter-io.cn/packages/neurodb_dart_driver" >
-      <img src="https://img.shields.io/badge/Pub-v0.0.1+x-red?style=popout" />
+      <img src="https://img.shields.io/badge/Pub-v0.0.1-red?style=popout" />
   </a>
   <a href="https://github.com/dudu-ltd/neurodb_dart_driver/stargazers">
       <img src="https://img.shields.io/github/stars/dudu-ltd/neurodb_dart_driver" alt="GitHub stars" />
