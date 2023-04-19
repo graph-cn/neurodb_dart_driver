@@ -21,7 +21,7 @@ This source code is licensed under Apache 2.0 License.
   </a>
 </p>
 
-neurodb 的 dart 驱动，用于 flutter。
+<p align="center">neurodb 的 dart 驱动，用于 flutter。</p>
 
 ---
 
@@ -31,7 +31,6 @@ neurodb 的 dart 驱动，用于 flutter。
 
 ## Features
 
-- [x] Support for `neurodb` 0.0.1 which REPO created by [https://github.com/pangguoming](https://github.com/pangguoming)
 - [x] 支持 `neurodb` 0.0.1 版本，该版本由 [https://github.com/pangguoming](https://github.com/pangguoming) 创建，[官网 ->](http://neurodb.org/)
 
 ## Getting started

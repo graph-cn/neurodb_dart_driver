@@ -22,7 +22,7 @@ This source code is licensed under Apache 2.0 License.
   </a>
 </p>
 
-Neurodb driver writen by dart for flutter.
+<p align="center">Neurodb driver writen by dart for flutter.</p>
 
 ---
 
