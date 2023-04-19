@@ -4,7 +4,7 @@
 
 name: neurodb_dart_driver
 description: A starting point for Dart libraries or applications.
-version: 1.0.0
+version: 0.0.1
 repository: https://github.com/dudu_ltd/neurodb_dart_driver
 
 environment:
