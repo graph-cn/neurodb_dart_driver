@@ -1,0 +1,15 @@
+# Copyright (c) 2023- All neurodb_dart_driver authors. All rights reserved.
+#
+# This source code is licensed under Apache 2.0 License.
+
+name: neurodb_dart_driver
+description: A starting point for Dart libraries or applications.
+version: 1.0.0
+repository: https://github.com/dudu_ltd/neurodb_dart_driver
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+
+dev_dependencies:
+  lints: ^2.0.0
+  test: ^1.21.0
