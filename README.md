@@ -31,12 +31,12 @@ This source code is licensed under Apache 2.0 License.
 
 ## Features
 
-- [x] 支持 `neurodb` 0.0.1 版本，该版本由 [https://github.com/pangguoming](https://github.com/pangguoming) 创建，[官网 ->](http://neurodb.org/)
+- [x] 支持 `neurodb` 0.0.1 版本，该数据库版本由 [https://github.com/pangguoming](https://github.com/pangguoming) 创建，[官网 ->](http://neurodb.org/)
 
 ## Getting started
 
 ```sh
-flutter pub add neurodb_dart_driver
+dart pub add neurodb_dart_driver
 ```
 
 ## Usage
@@ -55,4 +55,4 @@ void main() async {
 
 ## Licence
 
-neurodb_dart_driver is under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+neurodb_dart_driver 遵循 [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0) 开源协议。

@@ -32,7 +32,7 @@ This source code is licensed under Apache 2.0 License.
 
 ## Features
 
-- [x] Support for `neurodb` 0.0.1 which REPO created by [https://github.com/pangguoming](https://github.com/pangguoming). [Home Page ->](http://neurodb.org/)
+- [x] Support for `neurodb` 0.0.1 which DATABASE created by [https://github.com/pangguoming](https://github.com/pangguoming). [Home Page ->](http://neurodb.org/)
 
 ## Getting started
 

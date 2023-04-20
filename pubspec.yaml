@@ -3,9 +3,9 @@
 # This source code is licensed under Apache 2.0 License.
 
 name: neurodb_dart_driver
-description: Neurodb driver writen by dart for flutter.
-version: 0.0.1
-homepage: https://github.com/dudu_ltd/neurodb_dart_driver
+description: Neurodb driver writen by dart, which help flutter app connect to neurodb server.
+version: 0.0.1+1
+homepage: https://github.com/dudu-ltd/neurodb_dart_driver
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
