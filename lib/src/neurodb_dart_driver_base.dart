@@ -223,7 +223,12 @@ class NeuroDBDriver {
     } else if (type == '\$') {
       resultSet.msg = readLine(bts);
     } else if (type == '#') {
-      resultSet.msg = readLine(bts);
+      var isDb = utf8.decode([bts[0]]) == '$NEURODB_SELECTDB';
+      if (isDb) {
+        readDbs(bts, resultSet);
+      } else {
+        resultSet.msg = readLine(bts);
+      }
     } else if (type == '*') {
       var line = readLine(bts);
       var head = line!.split(',');
@@ -508,4 +513,23 @@ String? readLine(List<int> bts) {
   }
 
   return sb.replaceAll('\r\n', '');
+}
+
+/// Read databases from [bts] and set them to [resultSet].
+/// 从 [bts] 中读取数据库并将其设置为 [resultSet]。
+void readDbs(List<int> bts, ResultSet resultSet) {
+  bts.removeAt(0);
+  bts.removeAt(0);
+  var sb = utf8.decode(bts).trim();
+  var dbs = sb.split('\r\n');
+  resultSet.results = dbs.length;
+  resultSet.recordSet = RecordSet()
+    ..records = dbs
+        .map((e) => [
+              ColVal()
+                ..type = VO_STRING
+                ..val = e
+            ])
+        .toList();
+  resultSet.status = 1;
 }

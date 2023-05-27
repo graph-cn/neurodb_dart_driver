@@ -31,7 +31,7 @@ This source code is licensed under Apache 2.0 License.
 
 ## Features
 
-- [x] 支持 `neurodb` 0.0.1 版本，该数据库版本由 [https://github.com/pangguoming](https://github.com/pangguoming) 创建，[官网 ->](http://neurodb.org/)
+- [x] 支持 `neurodb` 0.0.1 版本，该数据库版本由 [https://github.com/pangguoming](https://github.com/pangguoming) 创建，[官网 ->](https://neurodb.org/)
 
 ## Getting started
 

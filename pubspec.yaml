@@ -4,7 +4,7 @@
 
 name: neurodb_dart_driver
 description: Neurodb driver writen by dart, which help flutter app connect to neurodb server.
-version: 0.0.1+1
+version: 0.0.1+2
 homepage: https://github.com/dudu-ltd/neurodb_dart_driver
 
 environment:
