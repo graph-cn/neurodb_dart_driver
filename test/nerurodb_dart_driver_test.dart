@@ -13,8 +13,8 @@ void main() {
       // do nothing.
     });
 
-    test('First Test', () {
-      var result = driver.executeQuery("match (n)-[r]->(m) return n,r,m ");
+    test('First Test', () async {
+      var result = await driver.executeQuery("match (n)-[r]->(m) return n,r,m");
       print("$result");
       print('ok');
     });

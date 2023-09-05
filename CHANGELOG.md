@@ -4,7 +4,10 @@ Copyright (c) 2023- All neurodb_dart_driver authors. All rights reserved.
 This source code is licensed under Apache 2.0 License. 
 -->
 
-## 0.0.1+2
+## 0.0.1+4
+- feat: clear status codes for results.
+
+## 0.0.1+3
 - feat: show databases support.
 
 ## 0.0.1+1

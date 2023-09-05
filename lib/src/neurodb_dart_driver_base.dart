@@ -219,13 +219,19 @@ class NeuroDBDriver {
     var btsstr = utf8.decode([bts.removeAt(0)]);
     var type = btsstr[0];
     if (type == '@') {
-      resultSet.status = 1;
+      /* 返回的是只有一个成功执行状态位的数据包*/
+      resultSet.status = ResultStatus.PARSER_OK.index;
     } else if (type == '\$') {
+      /* 返回的是包含错误消息的报错数据包*/
+      resultSet.status = ResultStatus.ERROR_INFO.index;
       resultSet.msg = readLine(bts);
     } else if (type == '#') {
+      /* 返回的是包含正常消息的消息数据包*/
+      resultSet.status = ResultStatus.PARSER_OK.index;
       var msgLen = readLine(bts) ?? '0';
       resultSet.msg = utf8.decode(bts.sublist(0, int.tryParse(msgLen)));
     } else if (type == '*') {
+      /* 返回的是图查询结果数据包 */
       var line = readLine(bts);
       var head = line!.split(',');
       resultSet.status = int.parse(head[0]);
@@ -509,4 +515,101 @@ String? readLine(List<int> bts) {
   }
 
   return sb.replaceAll('\r\n', '');
+}
+
+// 状态码新增时，请勿打乱原有顺序。
+/// 结果状态码
+enum ResultStatus {
+  /// 错误消息
+  ERROR_INFO,
+
+  /// 运行成功
+  PARSER_OK,
+
+  /// 内存分配异常
+  NO_MEM_ERR,
+
+  /// 普通语法错误
+  SYNTAX_ERR,
+
+  /// 未找到此指令
+  NO_Exp_ERR,
+
+  /// 缺少关系
+  NO_LNK_ERR,
+
+  /// 缺少箭头
+  NO_ARROW_ERR,
+
+  /// 关系双箭头错误
+  DOU_ARROW_ERR,
+
+  /// 缺少头节点
+  NO_HEAD_ERR,
+
+  /// 缺少尾结点
+  NO_TAIL_ERR,
+
+  /// 必须是字母数字下划线
+  CHAR_NUM_UL_ERR,
+
+  /// 不是模式表达式
+  NOT_PATTERN_ERR,
+
+  /// 此变量已被使用
+  DUP_VAR_NM_ERR,
+
+  /// 数组中含有不相同的类型
+  NO_SM_TYPE_ERR,
+
+  /// 不支持的数据类型
+  NO_SUP_TYPE,
+
+  /// 指令搭配错误
+  WRON_EXP,
+
+  /// 暂不支持的指令
+  NOT_SUPPORT,
+
+  /// where语句语法
+  WHERE_SYN_ERR,
+
+  /// where运算语法
+  WHERE_RUN_ERR,
+
+  /// 未找到变量
+  NO_VAR_ERR,
+
+  /// 缺失配对括号
+  NO_PAIR_BRK,
+
+  /// 删除带有关边的节点
+  CLIST_HAS_LINK_ERR,
+
+  /// 数据操作错误
+  CLIST_OPR_ERR,
+
+  /// order by语句语法
+  ORDER_BY_SYN_ERR,
+
+  /// 不可删除路径
+  DEL_PATH_ERR,
+
+  /// 未定义的变量
+  UNDEFINED_VAR_ERR,
+
+  /// where 模式条件，独立连通图缺少变量
+  WHERE_PTN_NO_VAR_ERR,
+
+  /// 不支持的存储过程
+  NO_PROC_ERR,
+
+  /// csv文件读取错误
+  CSV_FILE_ERR,
+
+  /// csv 变量属性名在列中未找到
+  CSV_ROW_VAR_ERR,
+
+  /// 查找过载超时
+  QUERY_TIME_OUT_ERR;
 }
