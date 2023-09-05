@@ -18,5 +18,11 @@ void main() {
       print("$result");
       print('ok');
     });
+
+    test('test msg type handle', () async {
+      var result = await driver.executeQuery("show databases");
+      print("$result");
+      print('ok');
+    });
   });
 }
