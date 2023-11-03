@@ -8,7 +8,7 @@ version: 0.0.1+4
 homepage: https://github.com/dudu-ltd/neurodb_dart_driver
 
 environment:
-  sdk: '>=2.19.0 <3.0.0'
+  sdk: '>=2.19.0 <4.0.0'
 
 dev_dependencies:
   lints: ^2.0.0
